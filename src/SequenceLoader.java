@@ -3,7 +3,11 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 import javax.swing.JFileChooser;
-
+/**
+ * 
+ * @author keshavdial
+ *
+ */
 public abstract class SequenceLoader {
 
 	protected String sequence;
