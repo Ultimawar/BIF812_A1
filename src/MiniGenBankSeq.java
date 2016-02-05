@@ -1,5 +1,5 @@
 
-public class MiniGenBankSeq {
+public class MiniGenBankSeq extends SequenceLoader {
 	private String locus;
 	private String accessionNumber;
 	private String definition;
@@ -46,6 +46,10 @@ public class MiniGenBankSeq {
 		this.accessionNumber=accessionNumber;
 		this.definition=definition;
 		this.source=source;
+	}
+	public String toString(MiniGenBankSeq miniGen){
+		String formatted = miniGen.locus +('\n')+ miniGen.accessionNumber +('\n')+ miniGen.definition +('\n')+ miniGen.source;
+		return formatted;
 	}
 	
 	public static void main(String[] args){
