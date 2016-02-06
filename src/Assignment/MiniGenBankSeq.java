@@ -74,7 +74,8 @@ public class MiniGenBankSeq extends SequenceLoader {
 	//override toString()
 	@Override
 	public String toString(){
-		String formatted = this.getLocus() +('\n')+ this.getAccession() +('\n')+ this.getDefiniton() +('\n')+ this.getSource();
+		String formatted = "LOCUS       "+this.getLocus() +("\nACCESSION   ")+ this.getAccession() +("\nDEFINITION  ")+ this.getDefiniton() +("\nVERSION     ")+ this.getSource();
+				
 		return formatted;
 	}
 	
