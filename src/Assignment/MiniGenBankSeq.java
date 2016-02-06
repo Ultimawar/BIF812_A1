@@ -5,27 +5,51 @@ public class MiniGenBankSeq extends SequenceLoader {
 	private String accessionNumber;
 	private String definition;
 	private String source;
+	
 	// getters and setters
 	public String getLocus(){
-		return locus;
+		if (locus==null){
+			return "NOT INITIALIZED";
+		}
+		else{
+			return locus;
+		}
 	}
 	public void setLocus(String locusValue){
 		locus = locusValue;
 	}
+	
 	public String getAccession(){
-		return accessionNumber;
+		if (accessionNumber==null){
+			return "NOT INITIALIZED";
+		}
+		else{
+			return accessionNumber;
+		}
 	}
 	public void setAccession(String accessionValue){
 		accessionNumber = accessionValue;
 	}
+	
 	public String getDefiniton(){
-		return definition;
+		if (definition==null){
+			return "NOT INITIALIZED";
+		}
+		else{
+			return definition;
+		}
 	}
 	public void setDefinition(String definitionValue){
 		definition = definitionValue;
 	}
+	
 	public String getSource(){
-		return source;
+		if (source==null){
+			return "NOT INITIALIZED";
+		}
+		else{
+			return source;
+		}
 	}
 	public void setSource(String sourceValue){
 		source = sourceValue;
@@ -38,18 +62,19 @@ public class MiniGenBankSeq extends SequenceLoader {
 	}
 	//2 args
 	public MiniGenBankSeq(String locus, String accession){
-		this.locus=locus;
-		this.accessionNumber=accession;
+		this.setLocus(locus);
+		this.setAccession(accession);
 	}
 	//4 args
 	public MiniGenBankSeq(String locus, String accession, String definition, String source){
 		this(locus, accession);
-		this.definition=definition;
-		this.source=source;
+		setDefinition(definition);
+		setSource(source);
 	}
 	public MiniGenBankSeq(String[] arguments){
 		System.out.println(arguments);
 	}
+	//override toString()
 	@Override
 	public String toString(){
 		String formatted = locus +('\n')+ accessionNumber +('\n')+ definition +('\n')+ source;
