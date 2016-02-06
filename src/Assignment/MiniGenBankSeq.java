@@ -35,21 +35,24 @@ public class MiniGenBankSeq extends SequenceLoader {
 	//constructors
 	//no args
 	public MiniGenBankSeq(){
-		this("filler","filler","filler","filler");
 	}
 	//2 args
-	public MiniGenBankSeq(String definition, String source){
-		this("filler", "filler", definition, source);
+	public MiniGenBankSeq(String locus, String accession){
+		this.locus=locus;
+		this.accessionNumber=accession;
 	}
 	//4 args
-	public MiniGenBankSeq(String locus, String accessionNumber, String definition, String source){
-		this.locus=locus;
-		this.accessionNumber=accessionNumber;
+	public MiniGenBankSeq(String locus, String accession, String definition, String source){
+		this(locus, accession);
 		this.definition=definition;
 		this.source=source;
 	}
-	public String toString(MiniGenBankSeq miniGen){
-		String formatted = miniGen.locus +('\n')+ miniGen.accessionNumber +('\n')+ miniGen.definition +('\n')+ miniGen.source;
+	public MiniGenBankSeq(String[] arguments){
+		System.out.println(arguments);
+	}
+	@Override
+	public String toString(){
+		String formatted = locus +('\n')+ accessionNumber +('\n')+ definition +('\n')+ source;
 		return formatted;
 	}
 	
