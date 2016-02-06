@@ -79,13 +79,6 @@ public class MiniGenBankSeq extends SequenceLoader {
 		return formatted;
 	}
 	
-	public void StringBuilderMiniGenBankSeq(String s, int times){
-		for(int i=0;i<times;i++){
-		System.out.println("Concatenating time "+ i + " of "+times);
-		sequence = sequence + s;
-		}
-	}
-	
 	public static void main(String[] args){
 		MiniGenBankSeq bob = new MiniGenBankSeq("filler", "filler", "filler", "filler"); 
 		System.out.println(bob.definition);
