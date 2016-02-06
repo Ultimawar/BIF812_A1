@@ -58,7 +58,7 @@ public class UseMiniGeneBankSeq {
 				+"\nthen formatted as above."
 				+"\n\nFINAL NOTES:"
 				+"\nThe MiniGenBankSeq class is limited to the constructors demonstrated above,"
-				+"\naccepting only strings arguments where appropriate.\n"
+				+"\naccepting only string arguments where appropriate.\n"
 				+"**********************************************************************************"
 				);
 		System.out.println(demonstrationPartThree);
