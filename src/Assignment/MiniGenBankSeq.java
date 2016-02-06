@@ -71,13 +71,10 @@ public class MiniGenBankSeq extends SequenceLoader {
 		setDefinition(definition);
 		setSource(source);
 	}
-	public MiniGenBankSeq(String[] arguments){
-		System.out.println(arguments);
-	}
 	//override toString()
 	@Override
 	public String toString(){
-		String formatted = locus +('\n')+ accessionNumber +('\n')+ definition +('\n')+ source;
+		String formatted = this.getLocus() +('\n')+ this.getAccession() +('\n')+ this.getDefiniton() +('\n')+ this.getSource();
 		return formatted;
 	}
 	
