@@ -1,3 +1,11 @@
+/* AUTHOR: Keshav Dial
+ * COURSE: BIF812
+ * PURPOSE: Assignment #1 for Java
+ * I declare that the attached assignment is my own work in accordance with Seneca Academic Policy. 
+ * No part of this assignment has been copied manually or electronically from any other source (including web sites) 
+ * or distributed to other students.
+Keshav Dial 250526958 */
+
 package Assignment;
 
 public class TestSW {
@@ -12,6 +20,6 @@ public class TestSW {
 }
 // 100,000 -> 2,452,282,481
 // 10,000 -> 648,113,309
-// 1,000 -> 409,346,852
-// 100 -> 398,603,935
+// 1,000 -> 452,363,696
+// 100 -> 475,941,987
 // 10 -> 563,134,264

@@ -1,6 +1,17 @@
+/* AUTHOR: Keshav Dial
+ * COURSE: BIF812
+ * PURPOSE: Assignment #1 for Java
+ * I declare that the attached assignment is my own work in accordance with Seneca Academic Policy. 
+ * No part of this assignment has been copied manually or electronically from any other source (including web sites) 
+ * or distributed to other students.
+Keshav Dial 250526958 */
+
 package Assignment;
 public class UseMiniGeneBankSeq {
 	public static void main(String[] args){
+		/**
+		 * Setting GenBank information found on Internet as Strings.
+		 */
 		String gen1Locus = "KU556802                 749 bp    RNA     linear   VRL 02-FEB-2016";
 		String gen1Definition = "Zika virus isolate MEX/InDRE/14/2015 NS5 protein gene, partial cds.";
 		String gen1Accession = "KU556802";
@@ -13,10 +24,17 @@ public class UseMiniGeneBankSeq {
 		String gen3Definition ="Herpes simplex virus type 2 (strain HG52), complete genome.";
 		String gen3Accession ="Z86099";
 		String gen3Source ="Human herpesvirus 2 (Herpes simplex virus 2)\n  ORGANISM  Human herpesvirus 2\n            Viruses; dsDNA viruses, no RNA stage; Herpesvirales; Herpesviridae;\n            Alphaherpesvirinae; Simplexvirus.";
+		/**
+		 * Creating MiniGenBankSeq objects using 3 different constructors with the GenBank feeder 
+		 * strings as arguments where appropriate.
+		 */
 		MiniGenBankSeq noArguments = new MiniGenBankSeq();
 		MiniGenBankSeq twoArguments = new MiniGenBankSeq(gen2Locus, gen2Accession);
 		MiniGenBankSeq fourArguments = new MiniGenBankSeq(gen3Locus, gen3Accession,gen3Definition,gen3Source);
-		String demonstrationPartOne =
+		/** 
+		 * Printing first segment of Demonstration
+		 */
+		System.out.println
 				("**********************************************************************************\n"
 				+"*                               BIF812 ASSIGNMENT #1                             *\n"
 				+"*                                  MiniGenBankSeq                                *\n"
@@ -29,12 +47,17 @@ public class UseMiniGeneBankSeq {
 				+"\nvalue equals NULL. Because each of the fields were NULL, all 4 'getters' returned"
 				+"\n'NOT INITIALIZED' to the toString() method, hence the output above."
 				+"\n\n=> USING SETTER METHODS TO FILL IN MISSING DATA");
-		System.out.println(demonstrationPartOne);
+		/**
+		 * Filling in NULL values
+		 */
 		noArguments.setLocus(gen1Locus);
 		noArguments.setAccession(gen1Accession);
 		noArguments.setDefinition(gen1Definition);
 		noArguments.setSource(gen1Source);
-		String demonstrationPartTwo=(
+		/**
+		 * Printing second segment of Demonstration 
+		 */
+		System.out.println(
 				"=> PRINTING UPDATED OBJECT\n\n"+noArguments.toString()
 				+"\n\nNow that all fields have been set, all parts of the GenBank file are returned."
 				+"\n\nDEMONSTRATION #2: A MiniGenBankSeq constructor with two arguments\n\n"
@@ -44,10 +67,15 @@ public class UseMiniGeneBankSeq {
 				+"\nfields respectively. Because the fields of definition and version are not set,"
 				+"\n'NOT INITIALIZED' is also returned."
 				+"\n\n=> USING SETTER METHODS TO FILL IN MISSING DATA");
-		System.out.println(demonstrationPartTwo);
+		/**
+		 * Filling in NULL values
+		 */
 		twoArguments.setDefinition(gen2Definition);
 		twoArguments.setSource(gen2Source);
-		String demonstrationPartThree=(
+		/**
+		 * Printing last segment of Demonstration
+		 */
+		System.out.println(
 				"=> PRINTING UPDATED OBJECT\n\n"+twoArguments.toString()
 				+"\n\nNow that all fields have been set, all parts of the GenBank file are returned."
 				+"\n\nDEMONSTRATION #3: A MiniGenBankSeq constructor with four arguments\n\n"
@@ -61,7 +89,6 @@ public class UseMiniGeneBankSeq {
 				+"\naccepting only string arguments where appropriate.\n"
 				+"**********************************************************************************"
 				);
-		System.out.println(demonstrationPartThree);
 	}
 }
 // GenBank 1 Data from http://www.ncbi.nlm.nih.gov/nuccore/KU556802.1
